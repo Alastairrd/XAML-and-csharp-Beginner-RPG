@@ -1,0 +1,16 @@
+--DESIGN DOCUMENT: Als RPG
+
+Game philosophy: A dungeon crawler with simple 2d graphics, a single player character that can move from room to room, collecting loot, fighting battles in a turn based style, and potentially finishing small quests. Win condition could be an escape, or a boss, possibly both.
+
+--Features:
+A UI featuring a text log for displaying all notable events for the player to see.
+Multiple rooms for the player to explore, connected in a N/E/S/W fashion.
+Turn based combat with simple enemies that have basic statistics that determine their strength in battles.
+Player character with hitpoints experience/levels.
+Ability to gain loot from either defeating enemies and winning battles, or finding it from empty 'rooms'.
+
+--Possible future additions:
+Small quests.
+Player and enemy abilities.
+Objective of adding more player/enemy attributes to add depth.
+Random events when exploring rooms (positive and negative outcomes).
