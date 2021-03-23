@@ -1,11 +1,29 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "Engine/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Engine.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Engine.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Engine/1.0.0": {
+      "type": "project",
+      "path": "../Engine/Engine.csproj",
+      "msbuildProject": "../Engine/Engine.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "Engine >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Anon\\.nuget\\packages\\": {}
@@ -13,11 +31,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\XAML-and-csharp-Beginner-RPG\\BeginnerRPG\\BeginnerRPG.csproj",
-      "projectName": "BeginnerRPG",
-      "projectPath": "D:\\Projects\\XAML-and-csharp-Beginner-RPG\\BeginnerRPG\\BeginnerRPG.csproj",
+      "projectUniqueName": "C:\\Users\\Anon\\Documents\\GitHub\\XAML-and-csharp-Beginner-RPG\\WPFUI\\WPFUI.csproj",
+      "projectName": "WPFUI",
+      "projectPath": "C:\\Users\\Anon\\Documents\\GitHub\\XAML-and-csharp-Beginner-RPG\\WPFUI\\WPFUI.csproj",
       "packagesPath": "C:\\Users\\Anon\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\XAML-and-csharp-Beginner-RPG\\BeginnerRPG\\obj\\",
+      "outputPath": "C:\\Users\\Anon\\Documents\\GitHub\\XAML-and-csharp-Beginner-RPG\\WPFUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Anon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -33,7 +51,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Anon\\Documents\\GitHub\\XAML-and-csharp-Beginner-RPG\\Engine\\Engine.csproj": {
+              "projectPath": "C:\\Users\\Anon\\Documents\\GitHub\\XAML-and-csharp-Beginner-RPG\\Engine\\Engine.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
