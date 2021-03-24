@@ -1,0 +1,7 @@
+C:\Users\Anon\Documents\GitHub\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Engine.dll
+C:\Users\Anon\Documents\GitHub\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Engine.pdb
+C:\Users\Anon\Documents\GitHub\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.csprojAssemblyReference.cache
+C:\Users\Anon\Documents\GitHub\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.csproj.CoreCompileInputs.cache
+C:\Users\Anon\Documents\GitHub\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.dll
+C:\Users\Anon\Documents\GitHub\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.pdb
+C:\Users\Anon\Documents\GitHub\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.g.resources
