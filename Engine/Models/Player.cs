@@ -7,14 +7,65 @@ using System.Threading.Tasks;
 
 namespace Engine.Models
 {
-    public class Player : INotifyPropertyChanged
+    public class Player : BaseNotificationClass
     {
+        private string _name;
+        private int _hitPoints;
+        private string _characterClass;
+        private int _gold;
+        private int _level;
         private int _experiencePoints;
-        public string Name { get; set; }
-        public int HitPoints { get; set; }
-        public string CharacterClass { get; set; }
-        public int Gold { get; set; }
-        public int Level { get; set; }
+        
+        public string Name
+        {
+            get { return _name; }
+
+            set
+            {
+                _name = value;
+                OnPropertyChanged(nameof(Name));
+            }
+        }
+        public int HitPoints
+        {
+            get { return _hitPoints; }
+
+            set
+            {
+                _hitPoints = value;
+                OnPropertyChanged(nameof(HitPoints));
+            }
+        }
+        public string CharacterClass
+        {
+            get { return _characterClass; }
+
+            set
+            {
+                _characterClass = value;
+                OnPropertyChanged(nameof(CharacterClass));
+            }
+        }
+        public int Gold
+        {
+            get { return _gold; }
+
+            set
+            {
+                _gold = value;
+                OnPropertyChanged(nameof(Gold));
+            }
+        }
+        public int Level
+        {
+            get { return _level; }
+
+            set
+            {
+                _level = value;
+                OnPropertyChanged(nameof(Level));
+            }
+        }
         public int ExperiencePoints
         {
             get { return _experiencePoints; }
@@ -22,15 +73,8 @@ namespace Engine.Models
             set 
             { 
                 _experiencePoints = value;
-                OnPropertyChanged("ExperiencePoints");
+                OnPropertyChanged(nameof(ExperiencePoints));
             }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
