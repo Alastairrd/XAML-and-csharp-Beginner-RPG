@@ -31,11 +31,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anon\\Documents\\GitHub\\XAML-and-csharp-Beginner-RPG\\WPFUI\\WPFUI.csproj",
+      "projectUniqueName": "D:\\Projects\\XAML-and-csharp-Beginner-RPG\\WPFUI\\WPFUI.csproj",
       "projectName": "WPFUI",
-      "projectPath": "C:\\Users\\Anon\\Documents\\GitHub\\XAML-and-csharp-Beginner-RPG\\WPFUI\\WPFUI.csproj",
+      "projectPath": "D:\\Projects\\XAML-and-csharp-Beginner-RPG\\WPFUI\\WPFUI.csproj",
       "packagesPath": "C:\\Users\\Anon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anon\\Documents\\GitHub\\XAML-and-csharp-Beginner-RPG\\WPFUI\\obj\\",
+      "outputPath": "D:\\Projects\\XAML-and-csharp-Beginner-RPG\\WPFUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Anon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,8 +52,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Anon\\Documents\\GitHub\\XAML-and-csharp-Beginner-RPG\\Engine\\Engine.csproj": {
-              "projectPath": "C:\\Users\\Anon\\Documents\\GitHub\\XAML-and-csharp-Beginner-RPG\\Engine\\Engine.csproj"
+            "D:\\Projects\\XAML-and-csharp-Beginner-RPG\\Engine\\Engine.csproj": {
+              "projectPath": "D:\\Projects\\XAML-and-csharp-Beginner-RPG\\Engine\\Engine.csproj"
             }
           }
         }
