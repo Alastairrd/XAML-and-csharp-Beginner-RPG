@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Engine.EventArgs;
 using Engine.ViewModels;
+using WPFUI;
 
 namespace BeginnerRPG
 {
@@ -22,6 +23,7 @@ namespace BeginnerRPG
     /// </summary>
     public partial class MainWindow : Window
     {
+        //this is the main and only gamesession object, we use this and pass a reference to it through the project to use it as a data context
         private readonly GameSession _gameSession = new GameSession();
         public MainWindow()
         {
@@ -56,6 +58,19 @@ namespace BeginnerRPG
         private void OnClick_AttackMonster(object sender, RoutedEventArgs e)
         {
             _gameSession.AttackCurrentMonster();
+        }
+
+        private void OnClick_DisplayTradeScreen(object sender, RoutedEventArgs e)
+        {
+            //opens tradescreen window, sets the owner of the tradescreen to the main window and the datacontext to our gamesession
+            //we have set the tradescreen to have a game session variable and use that as the datacontext in tradescreen.xaml.cs
+            TradeScreen tradeScreen = new TradeScreen();
+            tradeScreen.Owner = this;
+            tradeScreen.DataContext = _gameSession;
+
+            //tradeScreen.Show would show the window but still click on the mainwindow. ShowDialog is modal, locks the main window until closed
+            tradeScreen.ShowDialog();
+
         }
 
         private void OnGameMessageRaised(object sender, GameMessageEventArgs e)
