@@ -19,6 +19,7 @@ namespace Engine.ViewModels
         public Player CurrentPlayer { get; set; }
         private Location _currentLocation;
         private Monster _currentMonster;
+        private Trader _currentTrader;
 
         public Location CurrentLocation 
         { 
@@ -35,6 +36,8 @@ namespace Engine.ViewModels
                 CompleteQuestsAtLocation();
                 GivePlayerQuestsAtLocation();
                 GetMonsterAtLocation();
+
+                CurrentTrader = CurrentLocation.TraderHere;
             } 
         }
 
@@ -56,6 +59,18 @@ namespace Engine.ViewModels
             }
         }
 
+        public Trader CurrentTrader
+        {
+            get { return _currentTrader;  }
+            set
+            {
+                _currentTrader = value;
+
+                OnPropertyChanged(nameof(CurrentTrader));
+                OnPropertyChanged(nameof(HasTrader));
+            }
+        }
+
         public Weapon CurrentWeapon;
         
 
@@ -73,6 +88,9 @@ namespace Engine.ViewModels
         
 
         public bool HasMonster => CurrentMonster != null;
+
+        //bool that returns true if the current trader is not null. Used to hide and display trade ui button
+        public bool HasTrader => CurrentTrader != null;
 
         #endregion
         public GameSession()
@@ -165,7 +183,7 @@ namespace Engine.ViewModels
 
                         foreach (ItemQuantity itemQuantity in quest.RewardItems)
                         {
-                            GameItem rewardItem = ItemFactory.CreateGameItem(itemQuantity.ItemID));
+                            GameItem rewardItem = ItemFactory.CreateGameItem(itemQuantity.ItemID);
 
                             CurrentPlayer.AddItemToInventory(rewardItem);
                             RaiseMessage($"You receive a {rewardItem.Name}");
