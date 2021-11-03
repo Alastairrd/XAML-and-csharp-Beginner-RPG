@@ -143,9 +143,12 @@ namespace Engine.Models
         {
             Inventory.Remove(item);
 
-            //gets first item rom groupedinventory where the item matches what we've passed in
-            GroupedInventoryItem groupedInventoryItemToRemove =
-                GroupedInventory.FirstOrDefault(gi => gi.Item == item);
+            //gets first item from groupedinventory where the item matches what we've passed in
+            //if unique, gets the exact item
+            //if not unique, just the ID so that quests can still remove multiple
+            GroupedInventoryItem groupedInventoryItemToRemove = item.IsUnique ?
+                GroupedInventory.FirstOrDefault(gi => gi.Item == item) :
+                GroupedInventory.FirstOrDefault(gi => gi.Item.ItemTypeID == item.ItemTypeID);
 
             //check we actually got something, should not be null but safety check
             if (groupedInventoryItemToRemove != null)
