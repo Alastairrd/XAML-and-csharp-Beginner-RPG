@@ -8,7 +8,12 @@
       "restore": {
         "projectUniqueName": "D:\\Projects\\XAML-and-csharp-Beginner-RPG\\Engine\\Engine.csproj",
         "projectName": "Engine",
-        "projectPath": "D:\\Projects\\XAML-and-csharp-Beginner-RPG\\Engine\\Engine.csproj"
+        "projectPath": "D:\\Projects\\XAML-and-csharp-Beginner-RPG\\Engine\\Engine.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
       },
       "frameworks": {
         "net472": {}
@@ -71,7 +76,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

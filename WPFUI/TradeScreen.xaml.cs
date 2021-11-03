@@ -32,31 +32,31 @@ namespace WPFUI
         {
             //Gets the row (item) from trade screen that sent the click to sell, which is determined by the framework element sender.data context
             //converts it to game item
-            GameItem item = ((FrameworkElement)sender).DataContext as GameItem;
+            GroupedInventoryItem item = ((FrameworkElement)sender).DataContext as GroupedInventoryItem;
 
             //make sure its not null to prevent problems
             if(item !=null)
             {
                 //our gold property has an event handler that will notify of changes already so need to need to worry
                 //methods set up already to handle the addition and removal from inventory in trader and player classes
-                Session.CurrentPlayer.Gold += item.Price;
-                Session.CurrentTrader.AddItemToInventory(item);
-                Session.CurrentPlayer.RemoveItemFromInventory(item);            
+                Session.CurrentPlayer.Gold += item.Item.Price;
+                Session.CurrentTrader.AddItemToInventory(item.Item);
+                Session.CurrentPlayer.RemoveItemFromInventory(item.Item);            
             }
         }
 
         private void OnClick_Buy(object sender, RoutedEventArgs e)
         {
-            GameItem item = ((FrameworkElement)sender).DataContext as GameItem;
+            GroupedInventoryItem item = ((FrameworkElement)sender).DataContext as GroupedInventoryItem;
 
             if(item != null)
             {
                 //Extra check here to make sure player has enough gold to buy item
-                if(Session.CurrentPlayer.Gold >= item.Price)
+                if(Session.CurrentPlayer.Gold >= item.Item.Price)
                 {
-                    Session.CurrentPlayer.Gold -= item.Price;
-                    Session.CurrentTrader.RemoveItemFromInventory(item);
-                    Session.CurrentPlayer.AddItemToInventory(item);
+                    Session.CurrentPlayer.Gold -= item.Item.Price;
+                    Session.CurrentTrader.RemoveItemFromInventory(item.Item);
+                    Session.CurrentPlayer.AddItemToInventory(item.Item);
                 }
                 else
                 {

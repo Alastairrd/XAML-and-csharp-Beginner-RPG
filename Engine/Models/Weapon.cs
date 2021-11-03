@@ -12,7 +12,7 @@ namespace Engine.Models
         public int MaximumDamage { get; set; }
 
         public Weapon(int itemTypeId, string name, int price, int minDamage, int maxDamage) 
-            : base(itemTypeId, name, price)
+            : base(itemTypeId, name, price, true) //isUnique bool always set to true as all weapons should be unique for future modification purposes (enchants etc)
         {
             MinimumDamage = minDamage;
             MaximumDamage = maxDamage;

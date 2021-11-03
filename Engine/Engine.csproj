@@ -45,6 +45,7 @@
     <Compile Include="EventArgs\GameMessageEventArgs.cs" />
     <Compile Include="Factories\TraderFactory.cs" />
     <Compile Include="Factories\MonsterFactory.cs" />
+    <Compile Include="Models\GroupedInventoryItem.cs" />
     <Compile Include="Models\LivingEntity.cs" />
     <Compile Include="Models\Trader.cs" />
     <Compile Include="Models\MonsterEncounter.cs" />
