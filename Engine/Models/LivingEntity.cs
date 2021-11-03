@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
@@ -16,7 +17,7 @@ namespace Engine.Models
         public string Name
         {
             get { return _name; }
-            set
+            private set
             {
                 _name = value;
                 OnPropertyChanged(nameof(Name));
@@ -26,7 +27,7 @@ namespace Engine.Models
         public int CurrentHitPoints
         {
             get { return _currentHitPoints; }
-            set
+            private set
             {
                 _currentHitPoints = value;
                 OnPropertyChanged(nameof(CurrentHitPoints));
@@ -36,7 +37,7 @@ namespace Engine.Models
         public int MaximumHitPoints
         {
             get { return _maximumHitPoints; }
-            set
+            private set
             {
                 _maximumHitPoints = value;
                 OnPropertyChanged(nameof(MaximumHitPoints));
@@ -46,7 +47,7 @@ namespace Engine.Models
         public int Gold
         {
             get { return _gold; }
-            set
+            private set
             {
                 _gold = value;
                 OnPropertyChanged(nameof(Gold));
@@ -57,14 +58,62 @@ namespace Engine.Models
         public ObservableCollection<GroupedInventoryItem> GroupedInventory { get; set; }
         public List<GameItem> Weapons =>
             Inventory.Where(i => i is Weapon).ToList();
+        public bool IsDead => CurrentHitPoints <= 0;
+
+        public event EventHandler OnKilled;
 
         //protected constructor can only be seen and used by child classes, further protecting it from being used
-        protected LivingEntity()
+        protected LivingEntity(string name, int maximumHitPoints, int currentHitPoints, int gold)
         {
+            Name = name;
+            MaximumHitPoints = maximumHitPoints;
+            CurrentHitPoints = currentHitPoints;
+            Gold = gold;
+
             Inventory = new ObservableCollection<GameItem>();
             GroupedInventory = new ObservableCollection<GroupedInventoryItem>();
         }
 
+        public void TakeDamage(int hitPointsOfDamage)
+        {
+            CurrentHitPoints -= hitPointsOfDamage;
+
+            if (IsDead)
+            {
+                CurrentHitPoints = 0;
+                RaiseOnKilledEvent();
+            }
+        }
+
+        public void Heal(int hitPointsToHeal)
+        {
+            CurrentHitPoints += hitPointsToHeal;
+
+            if (CurrentHitPoints > MaximumHitPoints)
+            {
+                CurrentHitPoints = MaximumHitPoints;
+            }
+        }
+
+        public void CompletelyHeal()
+        {
+            CurrentHitPoints = MaximumHitPoints;
+        }
+
+        public void ReceiveGold(int amountOfGold)
+        {
+            Gold += amountOfGold;
+        }
+
+        public void SpendGold(int amountOfGold)
+        {
+            if (amountOfGold > Gold)
+            {
+                throw new ArgumentOutOfRangeException($"{Name} only has {Gold} gold, and cannot spend {amountOfGold} gold.");
+            }
+
+            Gold -= amountOfGold;
+        }
         public void AddItemToInventory(GameItem item)
         {
             Inventory.Add(item);
@@ -78,13 +127,13 @@ namespace Engine.Models
             else
             {
                 //first check to see if it already exists in inventory
-                if (!GroupedInventory.Any(gi => gi.Item.ItemTypeId == item.ItemTypeId))
+                if (!GroupedInventory.Any(gi => gi.Item.ItemTypeID == item.ItemTypeID))
                 {
                     //if not, add it as groupedinventory item with quantity of 0, as we will increase quantity anyway always below
                     GroupedInventory.Add(new GroupedInventoryItem(item, 0));
                 }
 
-                GroupedInventory.First(gi => gi.Item.ItemTypeId == item.ItemTypeId).Quantity++;
+                GroupedInventory.First(gi => gi.Item.ItemTypeID == item.ItemTypeID).Quantity++;
             }
 
             OnPropertyChanged(nameof(Weapons));
@@ -99,10 +148,10 @@ namespace Engine.Models
                 GroupedInventory.FirstOrDefault(gi => gi.Item == item);
 
             //check we actually got something, should not be null but safety check
-            if(groupedInventoryItemToRemove != null)
+            if (groupedInventoryItemToRemove != null)
             {
                 //if item's quantity is 1, just remove it
-                if(groupedInventoryItemToRemove.Quantity == 1)
+                if (groupedInventoryItemToRemove.Quantity == 1)
                 {
                     GroupedInventory.Remove(groupedInventoryItemToRemove);
                 }
@@ -115,5 +164,13 @@ namespace Engine.Models
 
             OnPropertyChanged(nameof(Weapons));
         }
+        #region Private Functions
+
+        private void RaiseOnKilledEvent()
+        {
+            OnKilled?.Invoke(this, new System.EventArgs());
+        }
+
+        #endregion 
     }
 }

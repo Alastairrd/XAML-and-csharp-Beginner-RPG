@@ -8,16 +8,16 @@ namespace Engine.Models
 {
     public class GameItem
     {
-        public int ItemTypeId { get; set; }
+        public int ItemTypeID { get; set; }
         public string  Name { get; set; }
         public int Price { get; set; }
         public bool IsUnique { get; set; }
 
         //bool isUnique is set to a default value of false if not specified in the constructor ie: we only pass in the first 3 parameters
         //setting a default value like this can only be done on the final parameter of constructor
-        public GameItem(int itemTypeId, string name, int price, bool isUnique = false)
+        public GameItem(int itemTypeID, string name, int price, bool isUnique = false)
         {
-            ItemTypeId = itemTypeId;
+            ItemTypeID = itemTypeID;
             Name = name;
             Price = price;
             IsUnique = isUnique;
@@ -25,7 +25,7 @@ namespace Engine.Models
 
         public GameItem Clone()
         {
-            return new GameItem(ItemTypeId, Name, Price, IsUnique);
+            return new GameItem(ItemTypeID, Name, Price, IsUnique);
         }
     }
 }

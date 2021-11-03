@@ -28,7 +28,6 @@ D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\WPFUI.dll
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\WPFUI.pdb
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Engine.dll
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Engine.pdb
-D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\WPFUI.csprojAssemblyReference.cache
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\App.g.cs
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\WPFUI_MarkupCompile.cache
@@ -42,3 +41,7 @@ D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\WPFUI.csp
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\WPFUI.dll
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\WPFUI.pdb
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\WPFUI.genruntimeconfig.cache
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\WPFUI.csproj.AssemblyReference.cache
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\TradeScreen.baml
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\TradeScreen.g.cs
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\WPFUI.GeneratedMSBuildEditorConfig.editorconfig

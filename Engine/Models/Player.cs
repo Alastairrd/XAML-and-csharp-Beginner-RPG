@@ -46,15 +46,21 @@ namespace Engine.Models
         }
         public ObservableCollection<QuestStatus> Quests { get; set; }
 
-        public Player()
+        public Player(string name, string characterClass, int experiencePoints,
+                     int maximumHitPoints, int currentHitPoints, int gold) :
+           base(name, maximumHitPoints, currentHitPoints, gold)
         {
+            CharacterClass = characterClass;
+            ExperiencePoints = experiencePoints;
+
             Quests = new ObservableCollection<QuestStatus>();
         }
+
         public bool HasAllTheseItems(List<ItemQuantity> items)
         {
             foreach(ItemQuantity item in items)
             {
-                if(Inventory.Count(i => i.ItemTypeId == item.ItemID) < item.Quantity)
+                if(Inventory.Count(i => i.ItemTypeID == item.ItemID) < item.Quantity)
                 {
                     return false;
                 }
