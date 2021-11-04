@@ -1,0 +1,16 @@
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\bin\Debug\TestEngine.dll
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\bin\Debug\TestEngine.pdb
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\bin\Debug\Engine.dll
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\bin\Debug\Engine.pdb
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\obj\Debug\TestEngine.csproj.AssemblyReference.cache
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\obj\Debug\TestEngine.csproj.CoreCompileInputs.cache
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\obj\Debug\TestEngine.csproj.CopyComplete
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\obj\Debug\TestEngine.dll
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\obj\Debug\TestEngine.pdb
