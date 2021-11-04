@@ -11,7 +11,7 @@ namespace Engine.Models
     public class Player : LivingEntity
     {
         private string _characterClass;
-        private int _level;
+
         private int _experiencePoints;
 
         public string CharacterClass
@@ -24,24 +24,19 @@ namespace Engine.Models
                 OnPropertyChanged(nameof(CharacterClass));
             }
         }
-        public int Level
-        {
-            get { return _level; }
-
-            set
-            {
-                _level = value;
-                OnPropertyChanged(nameof(Level));
-            }
-        }
         public int ExperiencePoints
         {
             get { return _experiencePoints; }
 
-            set 
+            private set 
             { 
                 _experiencePoints = value;
+
                 OnPropertyChanged(nameof(ExperiencePoints));
+
+                //could potentially keep this code in setter as it it only called here
+                //however arguably better to call a function with a descriptive name and keep the setter clean
+                SetLevelAndMaximumHitPoints();
             }
         }
         public ObservableCollection<QuestStatus> Quests { get; set; }
@@ -56,6 +51,8 @@ namespace Engine.Models
             Quests = new ObservableCollection<QuestStatus>();
         }
 
+        public event EventHandler OnLeveledUp;
+
         public bool HasAllTheseItems(List<ItemQuantity> items)
         {
             foreach(ItemQuantity item in items)
@@ -66,6 +63,25 @@ namespace Engine.Models
                 }
             }
             return true;
+        }
+
+        public void AddExperience(int experiencePoints)
+        {
+            ExperiencePoints += experiencePoints;
+        }
+
+        private void SetLevelAndMaximumHitPoints()
+        {
+            int originalLevel = Level;
+
+            Level = (ExperiencePoints / 100) + 1;
+
+            if (Level != originalLevel)
+            {
+                MaximumHitPoints = Level * 10;
+
+                OnLeveledUp?.Invoke(this, System.EventArgs.Empty);
+            }
         }
     }
 }
