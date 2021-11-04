@@ -15,7 +15,7 @@ namespace Engine.ViewModels
         public event EventHandler<GameMessageEventArgs> OnMessageRaised;
 
         #region Properties
-        public World CurrentWorld { get; set; }
+        public World CurrentWorld { get; }
         private Player _currentPlayer;
 
         //common structure for when one object is subscribing to another object that can change
@@ -50,7 +50,9 @@ namespace Engine.ViewModels
             set 
             { 
                 _currentLocation = value;
-                OnPropertyChanged(nameof(CurrentLocation));
+                OnPropertyChanged();
+                //need to keep nameof for below as we arent calling onpropertychanged from those properties themselves
+                //so [callermembername] wont know exactly what it was, keep nameof for that reason
                 OnPropertyChanged(nameof(HasLocationToNorth));
                 OnPropertyChanged(nameof(HasLocationToWest));
                 OnPropertyChanged(nameof(HasLocationToEast));
@@ -84,7 +86,7 @@ namespace Engine.ViewModels
                     RaiseMessage($"You see a {CurrentMonster.Name} here!");
                 }
 
-                OnPropertyChanged(nameof(CurrentMonster));
+                OnPropertyChanged();
                 OnPropertyChanged(nameof(HasMonster));
             }
         }
@@ -96,7 +98,7 @@ namespace Engine.ViewModels
             {
                 _currentTrader = value;
 
-                OnPropertyChanged(nameof(CurrentTrader));
+                OnPropertyChanged();
                 OnPropertyChanged(nameof(HasTrader));
             }
         }

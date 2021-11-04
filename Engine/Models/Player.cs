@@ -21,7 +21,7 @@ namespace Engine.Models
             set
             {
                 _characterClass = value;
-                OnPropertyChanged(nameof(CharacterClass));
+                OnPropertyChanged();
             }
         }
         public int ExperiencePoints
@@ -32,14 +32,14 @@ namespace Engine.Models
             { 
                 _experiencePoints = value;
 
-                OnPropertyChanged(nameof(ExperiencePoints));
+                OnPropertyChanged();
 
                 //could potentially keep this code in setter as it it only called here
                 //however arguably better to call a function with a descriptive name and keep the setter clean
                 SetLevelAndMaximumHitPoints();
             }
         }
-        public ObservableCollection<QuestStatus> Quests { get; set; }
+        public ObservableCollection<QuestStatus> Quests { get; }
 
         public Player(string name, string characterClass, int experiencePoints,
                      int maximumHitPoints, int currentHitPoints, int gold) :

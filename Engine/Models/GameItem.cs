@@ -8,10 +8,11 @@ namespace Engine.Models
 {
     public class GameItem
     {
-        public int ItemTypeID { get; set; }
-        public string  Name { get; set; }
-        public int Price { get; set; }
-        public bool IsUnique { get; set; }
+        //No setters as once item is created these properties should not be changed
+        public int ItemTypeID { get; }
+        public string  Name { get; }
+        public int Price { get; }
+        public bool IsUnique { get; }
 
         //bool isUnique is set to a default value of false if not specified in the constructor ie: we only pass in the first 3 parameters
         //setting a default value like this can only be done on the final parameter of constructor
