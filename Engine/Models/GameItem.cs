@@ -20,13 +20,18 @@ namespace Engine.Models
         public string  Name { get; }
         public int Price { get; }
         public bool IsUnique { get; }
-        public AttackWithWeapon Action { get; set; }
+
+        //aswell as being a contract, an interface is also a datatype
+        //in this case we can use this to give a game item any action that implement the IAction interface
+        //rather than specifying a specific action
+        //however, when treated as an IAction object, we only have access to the IAction members, ie: that interface
+        public IAction Action { get; set; }
 
 
         //bool isUnique is set to a default value of false if not specified in the constructor ie: we only pass in the first 3 parameters
         //setting a default value like this can only be done on the final parameter of constructor
         public GameItem(ItemCategory category, int itemTypeID, string name, int price, 
-                        bool isUnique = false, AttackWithWeapon action = null)
+                        bool isUnique = false, IAction action = null)
         {
             Category = category;
             ItemTypeID = itemTypeID;
