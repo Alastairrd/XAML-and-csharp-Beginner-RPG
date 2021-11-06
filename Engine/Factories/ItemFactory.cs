@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Engine.Actions;
 using Engine.Models;
 
 namespace Engine.Factories
@@ -32,11 +33,16 @@ namespace Engine.Factories
         {
             _standardGameItems.Add(new GameItem(GameItem.ItemCategory.Miscellaneous, id, name, price));
         }
+        //split this into two parts, because the AttackWithWeapon object we want to assign a weapon
+        //but we need to make a weapon first to assign it one
         private static void BuildWeapon(int id, string name, int price,
                                              int minimumDamage, int maximumDamage)
         {
-            _standardGameItems.Add(new GameItem(GameItem.ItemCategory.Weapon, id, name, price,
-                                                 true, minimumDamage, maximumDamage));
+            GameItem weapon = new GameItem(GameItem.ItemCategory.Weapon, id, name, price, true);
+
+            weapon.Action = new AttackWithWeapon(weapon, minimumDamage, maximumDamage);
+
+            _standardGameItems.Add(weapon);
         }
     }
 }

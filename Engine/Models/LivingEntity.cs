@@ -14,6 +14,7 @@ namespace Engine.Models
         private int _maximumHitPoints;
         private int _gold;
         private int _level;
+        private GameItem _currentWeapon;
 
         public string Name
         {
@@ -66,6 +67,26 @@ namespace Engine.Models
                 OnPropertyChanged();
             }
         }
+        
+        //setter unsubscribes and resubscribes to the action events when changing weapons
+        public GameItem CurrentWeapon
+        {
+            get { return _currentWeapon; }
+            set
+            {
+                if(_currentWeapon != null)
+                {
+                    _currentWeapon.Action.OnActionPerformed -= RaiseActionPerformedEvent;
+                }
+
+                _currentWeapon = value;
+
+                if(_currentWeapon != null)
+                {
+                    _currentWeapon.Action.OnActionPerformed += RaiseActionPerformedEvent;
+                }
+            }
+        }
 
         public ObservableCollection<GameItem> Inventory { get; }
         public ObservableCollection<GroupedInventoryItem> GroupedInventory { get; }
@@ -73,6 +94,7 @@ namespace Engine.Models
             Inventory.Where(i => i.Category is GameItem.ItemCategory.Weapon).ToList();
         public bool IsDead => CurrentHitPoints <= 0;
 
+        public event EventHandler<string> OnActionPerformed;
         public event EventHandler OnKilled;
 
         //protected constructor can only be seen and used by child classes, further protecting it from being used
@@ -87,6 +109,11 @@ namespace Engine.Models
 
             Inventory = new ObservableCollection<GameItem>();
             GroupedInventory = new ObservableCollection<GroupedInventoryItem>();
+        }
+
+        public void UseCurrentWeaponOn(LivingEntity target)
+        {
+            CurrentWeapon.PerformAction(this, target);
         }
 
         public void TakeDamage(int hitPointsOfDamage)
@@ -187,6 +214,11 @@ namespace Engine.Models
         private void RaiseOnKilledEvent()
         {
             OnKilled?.Invoke(this, new System.EventArgs());
+        }
+
+        private void RaiseActionPerformedEvent(object sender, string result)
+        {
+            OnActionPerformed?.Invoke(this, result);
         }
 
         #endregion 
