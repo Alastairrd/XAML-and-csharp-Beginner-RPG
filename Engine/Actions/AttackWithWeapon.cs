@@ -41,13 +41,19 @@ namespace Engine.Actions
         {
             int damage = RandomNumberGenerator.NumberBetween(_minimumDamage, _maximumDamage);
 
-            if(damage == 0)
+            //if the actor is the player, actorName will equal "You", otherwise it will be "The...(monster or w/e)"
+            string actorName = (actor is Player) ? "You" : $"The {actor.Name.ToLower()}";
+            //same as above, targetName will be "you" if it is a player, otherwise it will be "The (monster etc)"
+            string targetName = (target is Player) ? "you" : $"The {target.Name.ToLower()}";
+
+            if (damage == 0)
             {
-                ReportResult($"You missed the {target.Name.ToLower()}.");
+                ReportResult($"{actorName} missed {targetName}.");
             }
             else
             {
-                ReportResult($"You hit the {target.Name.ToLower()} for {damage} points.");
+                //if damage is greater than 1, will add an 's' to 'point' to become plural
+                ReportResult($"{actorName} hit {targetName} for {damage} point{(damage > 1 ? "s" : "")}.");
                 target.TakeDamage(damage);
             }
         }

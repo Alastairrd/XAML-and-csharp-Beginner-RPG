@@ -76,6 +76,7 @@ namespace Engine.ViewModels
                 if (_currentMonster != null)
                 {
                     _currentMonster.OnKilled -= OnCurrentMonsterKilled;
+                    _currentMonster.OnActionPerformed -= OnCurrentMonsterPerformedAction;
                 }
 
                 _currentMonster = value;
@@ -83,6 +84,7 @@ namespace Engine.ViewModels
                 if (_currentMonster != null)
                 {
                     _currentMonster.OnKilled += OnCurrentMonsterKilled;
+                    _currentMonster.OnActionPerformed += OnCurrentMonsterPerformedAction;
 
                     RaiseMessage("");
                     RaiseMessage($"You see a {CurrentMonster.Name} here!");
@@ -272,21 +274,12 @@ namespace Engine.ViewModels
             }
             else
             {
-                // If monster is still alive, let the monster attack
-                int damageToPlayer = RandomNumberGenerator.NumberBetween(CurrentMonster.MinimumDamage, CurrentMonster.MaximumDamage);
-
-                if (damageToPlayer == 0)
-                {
-                    RaiseMessage("The monster attacks, but misses you.");
-                }
-                else
-                {
-                    RaiseMessage($"The {CurrentMonster.Name} hit you for {damageToPlayer} points.");
-
-                    //have to calculate damage after message is raised, as TakeDamage function can kill player, move location, etc
-                    CurrentPlayer.TakeDamage(damageToPlayer);
-                }
+                CurrentPlayer.UseCurrentWeaponOn(CurrentPlayer);
             }
+        }
+        private void OnCurrentMonsterPerformedAction(object sender, string result)
+        {
+            RaiseMessage(result);
         }
 
         private void OnCurrentPlayerPerformedAction(object sender, string result)
