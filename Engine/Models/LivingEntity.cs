@@ -9,12 +9,15 @@ namespace Engine.Models
     //inherits from basenotification class so that we can still notify about property changes
     public abstract class LivingEntity : BaseNotificationClass
     {
+        #region properties 
+
         private string _name;
         private int _currentHitPoints;
         private int _maximumHitPoints;
         private int _gold;
         private int _level;
         private GameItem _currentWeapon;
+        private GameItem _currentConsumable;
 
         public string Name
         {
@@ -88,11 +91,38 @@ namespace Engine.Models
             }
         }
 
+        public GameItem CurrentConsumable
+        {
+            get { return _currentConsumable; }
+            set
+            {
+                if(_currentConsumable != null)
+                {
+                    _currentConsumable.Action.OnActionPerformed -= RaiseActionPerformedEvent;
+                }
+
+                _currentConsumable = value;
+
+                if(_currentConsumable != null)
+                {
+                    _currentConsumable.Action.OnActionPerformed += RaiseActionPerformedEvent;
+                }
+            }
+        }
+
         public ObservableCollection<GameItem> Inventory { get; }
         public ObservableCollection<GroupedInventoryItem> GroupedInventory { get; }
         public List<GameItem> Weapons =>
             Inventory.Where(i => i.Category is GameItem.ItemCategory.Weapon).ToList();
+        public List<GameItem> Consumables =>
+            Inventory.Where(i => i.Category is GameItem.ItemCategory.Consumable).ToList();
+
+        public bool HasConsumable => Consumables.Any();
+
         public bool IsDead => CurrentHitPoints <= 0;
+
+        #endregion
+
 
         public event EventHandler<string> OnActionPerformed;
         public event EventHandler OnKilled;
@@ -114,6 +144,12 @@ namespace Engine.Models
         public void UseCurrentWeaponOn(LivingEntity target)
         {
             CurrentWeapon.PerformAction(this, target);
+        }
+
+        public void UseCurrentConsumable()
+        {
+            CurrentConsumable.PerformAction(this, this);
+            RemoveItemFromInventory(CurrentConsumable);
         }
 
         public void TakeDamage(int hitPointsOfDamage)
@@ -179,6 +215,8 @@ namespace Engine.Models
             }
 
             OnPropertyChanged(nameof(Weapons));
+            OnPropertyChanged(nameof(Consumables));
+            OnPropertyChanged(nameof(HasConsumable));
         }
 
         public void RemoveItemFromInventory(GameItem item)
@@ -208,6 +246,8 @@ namespace Engine.Models
             }
 
             OnPropertyChanged(nameof(Weapons));
+            OnPropertyChanged(nameof(Consumables));
+            OnPropertyChanged(nameof(HasConsumable));
         }
         #region Private Functions
 

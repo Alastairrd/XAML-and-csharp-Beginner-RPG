@@ -12,7 +12,8 @@ namespace Engine.Models
         public enum ItemCategory
         {
             Miscellaneous,
-            Weapon
+            Weapon,
+            Consumable
         }
         //No setters as once item is created these properties should not be changed
         public ItemCategory Category { get; }
