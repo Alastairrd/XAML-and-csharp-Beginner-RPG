@@ -47,10 +47,12 @@
     <Compile Include="Actions\IAction.cs" />
     <Compile Include="BaseNotificationClass.cs" />
     <Compile Include="EventArgs\GameMessageEventArgs.cs" />
+    <Compile Include="Factories\RecipeFactory.cs" />
     <Compile Include="Factories\TraderFactory.cs" />
     <Compile Include="Factories\MonsterFactory.cs" />
     <Compile Include="Models\GroupedInventoryItem.cs" />
     <Compile Include="Models\LivingEntity.cs" />
+    <Compile Include="Models\Recipe.cs" />
     <Compile Include="Models\Trader.cs" />
     <Compile Include="Models\MonsterEncounter.cs" />
     <Compile Include="RandomNumberGenerator.cs" />
