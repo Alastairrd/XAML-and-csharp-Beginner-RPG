@@ -61,5 +61,13 @@ namespace Engine.Factories
             item.Action = new Heal(item, hitPointsToHeal);
             _standardGameItems.Add(item);
         }
+
+        //looks at our list of items with an ID input to return a name
+        //first ? means if item ID is a null, it wont try to return a name
+        //second ?? means if the first part returned a null, it will in turn return an empty string ""
+        public static string ItemName (int itemTypeID)
+        {
+            return _standardGameItems.FirstOrDefault(i => i.ItemTypeID == itemTypeID)?.Name ?? "";
+        }
     }
 }
