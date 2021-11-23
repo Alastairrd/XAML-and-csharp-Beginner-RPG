@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -72,14 +73,17 @@ namespace BeginnerRPG
 
         private void OnClick_DisplayTradeScreen(object sender, RoutedEventArgs e)
         {
-            //opens tradescreen window, sets the owner of the tradescreen to the main window and the datacontext to our gamesession
-            //we have set the tradescreen to have a game session variable and use that as the datacontext in tradescreen.xaml.cs
-            TradeScreen tradeScreen = new TradeScreen();
-            tradeScreen.Owner = this;
-            tradeScreen.DataContext = _gameSession;
+            if(_gameSession.CurrentTrader != null)
+            {
+                //opens tradescreen window, sets the owner of the tradescreen to the main window and the datacontext to our gamesession
+                //we have set the tradescreen to have a game session variable and use that as the datacontext in tradescreen.xaml.cs
+                TradeScreen tradeScreen = new TradeScreen();
+                tradeScreen.Owner = this;
+                tradeScreen.DataContext = _gameSession;
 
-            //tradeScreen.Show would show the window but still click on the mainwindow. ShowDialog is modal, locks the main window until closed
-            tradeScreen.ShowDialog();
+                //tradeScreen.Show would show the window but still click on the mainwindow. ShowDialog is modal, locks the main window until closed
+                tradeScreen.ShowDialog();
+            }
 
         }
 
@@ -103,6 +107,10 @@ namespace BeginnerRPG
             _userInputActions.Add(Key.D, () => _gameSession.MoveEast());
             _userInputActions.Add(Key.Z, () => _gameSession.AttackCurrentMonster());
             _userInputActions.Add(Key.C, () => _gameSession.UseCurrentConsumable());
+            _userInputActions.Add(Key.I, () => SetTabFocusTo("InventoryTabItem"));
+            _userInputActions.Add(Key.Q, () => SetTabFocusTo("QuestsTabItem"));
+            _userInputActions.Add(Key.R, () => SetTabFocusTo("RecipesTabItem"));
+            _userInputActions.Add(Key.T, () => OnClick_DisplayTradeScreen(this, new RoutedEventArgs()));
         }
 
         private void MainWindow_OnKeyDown(object sender, KeyEventArgs e)
@@ -110,6 +118,21 @@ namespace BeginnerRPG
             if (_userInputActions.ContainsKey(e.Key))
             {
                 _userInputActions[e.Key].Invoke();
+            }
+        }
+
+        private void SetTabFocusTo(string tabName)
+        {
+            foreach (object item in PlayerDataTabControl.Items)
+            {
+                if (item is TabItem tabItem)
+                {
+                    if(tabItem.Name == tabName)
+                    {
+                        tabItem.IsSelected = true;
+                        return;
+                    }
+                }
             }
         }
     }
