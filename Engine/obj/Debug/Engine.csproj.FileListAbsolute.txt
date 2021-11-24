@@ -12,3 +12,4 @@ D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.csproj.CoreComp
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.dll
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.pdb
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.csproj.AssemblyReference.cache
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\GameData\GameItems.xml

@@ -44,3 +44,5 @@ D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\WPFUI.csp
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\TradeScreen.baml
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\TradeScreen.g.cs
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\WPFUI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\GameData\GameItems.xml
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\WPFUI.csproj.CopyComplete

@@ -14,3 +14,4 @@ D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\obj\Debug\TestEngine.csproj.
 D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\obj\Debug\TestEngine.csproj.CopyComplete
 D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\obj\Debug\TestEngine.dll
 D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\obj\Debug\TestEngine.pdb
+D:\Projects\XAML-and-csharp-Beginner-RPG\TestEngine\bin\Debug\GameData\GameItems.xml
