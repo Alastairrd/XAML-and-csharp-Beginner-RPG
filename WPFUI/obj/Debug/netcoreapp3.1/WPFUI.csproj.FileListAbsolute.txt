@@ -46,3 +46,15 @@ D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\TradeScre
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\WPFUI.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\GameData\GameItems.xml
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\WPFUI.csproj.CopyComplete
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\GameData\Locations.xml
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Locations\FarmFields.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Locations\Farmhouse.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Locations\HerbalistsGarden.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Locations\HerbalistsHut.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Locations\Home.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Locations\SpiderForest.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Locations\TownGate.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Locations\TownSquare.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Locations\Trader.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\App.baml

@@ -13,3 +13,13 @@ D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.dll
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.pdb
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.csproj.AssemblyReference.cache
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\GameData\GameItems.xml
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\GameData\Locations.xml
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Locations\FarmFields.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Locations\Farmhouse.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Locations\HerbalistsGarden.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Locations\HerbalistsHut.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Locations\Home.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Locations\SpiderForest.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Locations\TownGate.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Locations\TownSquare.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Locations\Trader.png
