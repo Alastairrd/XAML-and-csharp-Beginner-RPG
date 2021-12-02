@@ -58,3 +58,7 @@ D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Lo
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Locations\Trader.png
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\obj\Debug\netcoreapp3.1\App.baml
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Monsters\GiantSpider.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Monsters\Rat.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Monsters\Snake.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\GameData\Monsters.xml

@@ -7,7 +7,6 @@ C:\Users\Anon\Documents\GitHub\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Eng
 C:\Users\Anon\Documents\GitHub\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.g.resources
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Engine.dll
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Engine.pdb
-D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.g.resources
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.csproj.CoreCompileInputs.cache
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.dll
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\obj\Debug\Engine.pdb
@@ -23,3 +22,7 @@ D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Locations\Spide
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Locations\TownGate.png
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Locations\TownSquare.png
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Locations\Trader.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Monsters\GiantSpider.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Monsters\Rat.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Monsters\Snake.png
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\GameData\Monsters.xml
