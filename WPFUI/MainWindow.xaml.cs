@@ -18,7 +18,7 @@ using Engine.Models;
 using Engine.ViewModels;
 using WPFUI;
 
-namespace BeginnerRPG
+namespace WPFUI
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
