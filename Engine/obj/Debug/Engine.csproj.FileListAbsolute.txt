@@ -26,3 +26,6 @@ D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Monsters\GiantS
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Monsters\Rat.png
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\Images\Monsters\Snake.png
 D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\GameData\Monsters.xml
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\GameData\Quests.xml
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\GameData\Recipes.xml
+D:\Projects\XAML-and-csharp-Beginner-RPG\Engine\bin\Debug\GameData\Traders.xml

@@ -62,3 +62,6 @@ D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Mo
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Monsters\Rat.png
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\Images\Monsters\Snake.png
 D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\GameData\Monsters.xml
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\GameData\Quests.xml
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\GameData\Recipes.xml
+D:\Projects\XAML-and-csharp-Beginner-RPG\WPFUI\bin\Debug\netcoreapp3.1\GameData\Traders.xml
